@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://Incoming/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="Request" targetNamespace="http://Incoming/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://Incoming/" elementFormDefault="unqualified" targetNamespace="http://Incoming/" version="1.0">
+
+  <xs:element name="Authentication" type="tns:Authentication"/>
+
+  <xs:element name="AuthenticationResponse" type="tns:AuthenticationResponse"/>
+
+  <xs:complexType name="Authentication">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TranDetails" type="xs:string"/>
+      <xs:element minOccurs="0" name="AuthKey" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AuthenticationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="TranResponse" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="Authentication">
+    <wsdl:part element="tns:Authentication" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="AuthenticationResponse">
+    <wsdl:part element="tns:AuthenticationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="IncomingTransaction">
+    <wsdl:operation name="Authentication">
+      <wsdl:input message="tns:Authentication" name="Authentication">
+    </wsdl:input>
+      <wsdl:output message="tns:AuthenticationResponse" name="AuthenticationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="RequestSoapBinding" type="tns:IncomingTransaction">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Authentication">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="Authentication">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="AuthenticationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Request">
+    <wsdl:port binding="tns:RequestSoapBinding" name="IncomingTransactionPort">
+      <soap:address location="http://10.20.32.61:8081/PaymentGatewayESB/Request/IncomingTransaction"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE isopackager SYSTEM "genericpackager.dtd">
+<isopackager>
+  <isofield
+      id="0"
+      length="4"
+      name="MESSAGE TYPE INDICATOR"
+      class="org.jpos.iso.IFA_NUMERIC"/>
+  <isofield
+      id="1"
+      length="64"
+      name="BITMAP"
+      class="org.jpos.iso.IFA_BITMAP"/>
+  <isofield
+      id="2"
+      length="32"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_LLCHAR"/>
+  <isofield
+      id="3"
+      length="48"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IF_CHAR"/>
+  <isofield
+      id="4"
+      length="22"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IF_CHAR"/>
+  <isofield
+      id="5"
+      length="75"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IF_CHAR"/>
+  <isofield
+      id="6"
+      length="2"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_NUMERIC"/>
+  <isofield
+      id="7"
+      length="50"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_LLCHAR"/>
+  <isofield
+      id="8"
+      length="999"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_LLLCHAR"/>
+  <isofield
+      id="9"
+      length="999"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_LLLCHAR"/>
+  <isofield
+      id="10"
+      length="3"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_NUMERIC"/>
+  <isofield
+      id="11"
+      length="32"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_LLCHAR"/>
+  <isofield
+      id="12"
+      length="25"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_LLCHAR"/>
+  <isofield
+      id="13"
+      length="17"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IF_CHAR"/>
+  <isofield
+      id="14"
+      length="8"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IF_CHAR"/>
+  <isofield
+      id="15"
+      length="29"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_LLCHAR"/>
+  <isofield
+      id="16"
+      length="1"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IF_CHAR"/>
+  <isofield
+      id="17"
+      length="50"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_LLCHAR"/>
+  <isofield
+      id="18"
+      length="50"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_LLLCHAR"/>
+  <isofield
+      id="19"
+      length="31"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IF_CHAR"/>
+  <isofield
+      id="20"
+      length="8"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_NUMERIC"/>
+  <isofield
+      id="21"
+      length="12"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_LLCHAR"/>
+  <isofield
+      id="22"
+      length="99999"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_LLLLLCHAR"/>
+  <isofield
+      id="23"
+      length="253"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IF_CHAR"/>
+  <isofield
+      id="24"
+      length="28"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_LLCHAR"/>
+  <isofield
+      id="25"
+      length="8000"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_LLLLCHAR"/>
+  <isofield
+      id="26"
+      length="12"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_LLCHAR"/>
+  <isofield
+      id="27"
+      length="1"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IF_CHAR"/>
+  <isofield
+      id="28"
+      length="4"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_NUMERIC"/>
+  <isofield
+      id="29"
+      length="40"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_BINARY"/>
+  <isofield
+      id="30"
+      length="1"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IF_CHAR"/>
+  <isofield
+      id="31"
+      length="11"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_LLCHAR"/>
+  <isofield
+      id="32"
+      length="33"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_LLBINARY"/>
+  <isofield
+      id="33"
+      length="4"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_NUMERIC"/>
+  <isofield
+      id="34"
+      length="2"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_NUMERIC"/>
+  <isofield
+      id="35"
+      length="11"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IFA_LLCHAR"/>
+  <isofield
+      id="39"
+      length="2"
+      name="RESERVED PRIVATE USE"
+      class="org.jpos.iso.IF_CHAR"/>
+   </isopackager>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://137.135.122.114:8080/CardPaymentGateway/Request/IncomingTransaction?wsdl" uri="wsdl/137.135.122.114_8080/CardPaymentGateway/Request/IncomingTransaction.wsdl"/>
+    <system systemId="http://10.20.32.39:8081/PaymentGatewayESB/Request/IncomingTransaction?wsdl" uri="wsdl/10.20.32.39_8081/PaymentGatewayESB/Request/IncomingTransaction.wsdl"/>
+    <system systemId="http://10.20.32.61:8081/PaymentGatewayESB/Request/IncomingTransaction?wsdl" uri="wsdl/10.20.32.61_8081/PaymentGatewayESB/Request/IncomingTransaction.wsdl"/>
+</catalog>
