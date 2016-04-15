@@ -173,10 +173,12 @@ public class GatewayAirtimeTopUp {
     }
 
     //invoking the web service client reference 
+
     private static String authentication(java.lang.String tranDetails, java.lang.String authKey) {
         com.CardPaymentGateway.Request service = new com.CardPaymentGateway.Request();
         com.CardPaymentGateway.IncomingTransaction port = service.getIncomingTransactionPort();
         return port.authentication(tranDetails, authKey);
     }
+    
     
 }
