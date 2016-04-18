@@ -35,6 +35,8 @@ public class GatewayBillsPayment {
     String strProcessingCode="";
     String strpin="";
     String strBillNumber="";
+    String strBiller="";
+    String strpaymentMode="";
     
     Functions func=new Functions();
     public void run(String incomingMessage, String intid){
@@ -47,9 +49,11 @@ public class GatewayBillsPayment {
             strPhoneNumber=strReceivedData[4];
             strBillNumber=strReceivedData[5];
             strRefNo=strReceivedData[6];
+            strBiller=strReceivedData[7];
+            strpaymentMode=strReceivedData[8];
             strDeviceid=strRefNo;
             
-            func.SendPOSResponse(strResponse, intid);
+            //func.SendPOSResponse(strResponse, intid);
             if (strTrack2Data.contains("=")) {
                     strCardInformation = strTrack2Data.split("=");
                     strCardNumber = strCardInformation[0];
@@ -102,10 +106,10 @@ public class GatewayBillsPayment {
             object.put("MessageType", "0200");
             object.put("Country", "Kenya");
             object.put("Pin", strpin);
-            object.put("ProcessingCode", "000100");
+            object.put("ProcessingCode", strProcessingCode);
             object.put("Account", strBillNumber);
-            object.put("Biller", "KPLC");
-            object.put("PaymentMode", "Card");
+            object.put("Biller", strBiller);
+            object.put("PaymentMode", strpaymentMode);
 
             //System.out.println("JSON DATA= "+object);
 
