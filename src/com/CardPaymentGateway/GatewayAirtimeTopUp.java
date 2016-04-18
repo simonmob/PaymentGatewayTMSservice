@@ -107,10 +107,13 @@ public class GatewayAirtimeTopUp {
             object.put("ExpiryDate", strExpiryDate);
             object.put("RefNo", strRefNo);
             object.put("PhoneNumber", strPhoneNumber);
-            object.put("MessageType", "0000");
+            object.put("MessageType", "0200");
             object.put("Country", "Kenya");
             object.put("Pin", strpin);
-            object.put("ProcessingCode", strProcessingCode);
+            object.put("ProcessingCode", "000200");
+            object.put("Biller", "Safaricom");
+            object.put("PaymentMode", "Card");
+            object.put("Account", strPhoneNumber);
 
             System.out.println("JSON DATA= "+object);
 
@@ -147,7 +150,7 @@ public class GatewayAirtimeTopUp {
             strResponse += "  AIRTIME TOP UP #";
             for(int i=0;i<formatResponse.length;i++)
             {
-               strResponse += "SUCCESS:  "  + formatResponse[i]+ "#";
+               strResponse += formatResponse[i]+ "#";
             }
             
             strResponse += func.strPOSResponseFooter(strDeviceid);

@@ -8,6 +8,7 @@ package com.CardPaymentGateway;
 import com.MainFiles.Functions;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.regex.Pattern;
 import org.json.JSONObject;
 import sun.misc.BASE64Encoder;
 
@@ -98,11 +99,13 @@ public class GatewayBillsPayment {
             object.put("ExpiryDate", strExpiryDate);
             object.put("RefNo", strRefNo);
             object.put("PhoneNumber", strPhoneNumber);
-            object.put("MessageType", "0000");
+            object.put("MessageType", "0200");
             object.put("Country", "Kenya");
             object.put("Pin", strpin);
-            object.put("ProcessingCode", strProcessingCode);
-            object.put("BillNumber", strBillNumber);
+            object.put("ProcessingCode", "000100");
+            object.put("Account", strBillNumber);
+            object.put("Biller", "KPLC");
+            object.put("PaymentMode", "Card");
 
             //System.out.println("JSON DATA= "+object);
 
@@ -131,6 +134,15 @@ public class GatewayBillsPayment {
             //System.out.println(response);
             
             String noCurly=response.replaceAll("[{}]", "");
+            
+//            String status=null;
+//            
+//            Pattern pattern = Pattern.compile("{(.*?}'");
+//            Matcher matcher = pattern.matcher(mydata);
+//            if (matcher.find())
+//            {
+//                System.out.println(matcher.group(0));
+//            }
             String formatResponse[]=noCurly.split(",");
             
             
@@ -139,7 +151,7 @@ public class GatewayBillsPayment {
             strResponse += "  BILLS PAYMENT  #";
             for(int i=0;i<formatResponse.length;i++)
             {
-               strResponse += "SUCCESS:  "  + formatResponse[i]+ "#";
+               strResponse += formatResponse[i]+ "#";
             }
             
             strResponse += func.strPOSResponseFooter(strDeviceid);
